@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.shortname.toLowerCase() }}-mock-exam
+  description: ${{ values.fullname }} - Exam
+  annotations:
+    github.com/project-slug: 'hivagr/${{ values.shortname.toLowerCase() }}-mock-exam'
+  tags:
+    - java
+  links:
+    - url: http://localhost:3000
+      title: Mock - Exam
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: infra
+  system: mock-exams
